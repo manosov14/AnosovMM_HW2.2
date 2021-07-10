@@ -63,6 +63,9 @@ class ViewController: UIViewController {
     
     @IBAction func changeColorAction() {
         changeColor()
+        redColorLabel.text = String(format: "%.2f", redColorSlider.value)
+        greenColorLabel.text = String(format: "%.2f", greenColorSlider.value)
+        blueColorLabel.text = String(format: "%.2f", blueColorSlider.value)
     }
     
     //MARK: -Public methods
