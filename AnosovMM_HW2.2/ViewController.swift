@@ -21,59 +21,41 @@ class ViewController: UIViewController {
     @IBOutlet weak var greenColorSlider: UISlider!
     @IBOutlet weak var blueColorSlider: UISlider!
     
+    // MARK: Life sicle methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let minValue: Float = 0
-        let maxValue: Float = 1
-        let currentValue: Float = 0.00
-        
-        //redColorSlider
-        redColorSlider.value = currentValue
-        redColorLabel.text = String(redColorSlider.value)
-        redColorSlider.minimumValue = minValue
-        redColorSlider.maximumValue = maxValue
-        redColorSlider.thumbTintColor = .red
-        redColorSlider.minimumTrackTintColor = .red
-        
-        //greenColorSlider
-        greenColorSlider.value = currentValue
-        greenColorSlider.minimumValue = minValue
-        greenColorSlider.maximumValue = maxValue
-        greenColorSlider.thumbTintColor = .green
-        greenColorSlider.minimumTrackTintColor = .green
-        
-        //blueColorSlider
-        blueColorSlider.value = currentValue
-        blueColorSlider.minimumValue = minValue
-        blueColorSlider.maximumValue = maxValue
-        blueColorSlider.thumbTintColor = .blue
-        blueColorSlider.minimumTrackTintColor = .blue
-        
-        //start value for labels
-        redColorLabel.text = String(format: "%.2f", currentValue)
-        greenColorLabel.text = String(format: "%.2f", currentValue)
-        blueColorLabel.text = String(format: "%.2f", currentValue)
+        //refresh label text
+        redColorLabel.text = String(format: "%.2f", redColorSlider.value)
+        greenColorLabel.text = String(format: "%.2f", greenColorSlider.value)
+        blueColorLabel.text = String(format: "%.2f", blueColorSlider.value)
         
         //start state for view
-        changeColor()
+        changeColorView()
     }
     
     //MARK: - IBActions
     
     @IBAction func changeColorAction() {
-        changeColor()
-        redColorLabel.text = String(format: "%.2f", redColorSlider.value)
-        greenColorLabel.text = String(format: "%.2f", greenColorSlider.value)
-        blueColorLabel.text = String(format: "%.2f", blueColorSlider.value)
+        changeColorView()
+        refereshLabelText()
     }
     
     //MARK: -Public methods
     
-    func changeColor() {
+    func changeColorView() {
         viewArea.backgroundColor = UIColor(red: CGFloat(redColorSlider.value), green: CGFloat(greenColorSlider.value), blue: CGFloat(blueColorSlider.value), alpha: 1)
+        
+    }
+    
+    func refereshLabelText() {
+        redColorLabel.text = String(format: "%.2f", redColorSlider.value)
+        greenColorLabel.text = String(format: "%.2f", greenColorSlider.value)
+        blueColorLabel.text = String(format: "%.2f", blueColorSlider.value)
     }
 }
+
 
 
 
