@@ -44,12 +44,12 @@ class ViewController: UIViewController {
     
     //MARK: -Public methods
     
-    func changeColorView() {
+    private func changeColorView() {
         viewArea.backgroundColor = UIColor(red: CGFloat(redColorSlider.value), green: CGFloat(greenColorSlider.value), blue: CGFloat(blueColorSlider.value), alpha: 1)
         
     }
     
-    func refereshLabelText() {
+    private func refereshLabelText() {
         redColorLabel.text = String(format: "%.2f", redColorSlider.value)
         greenColorLabel.text = String(format: "%.2f", greenColorSlider.value)
         blueColorLabel.text = String(format: "%.2f", blueColorSlider.value)
