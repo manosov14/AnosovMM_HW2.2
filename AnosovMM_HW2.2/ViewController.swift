@@ -30,6 +30,8 @@ class ViewController: UIViewController {
         greenColorLabel.text = String(format: "%.2f", greenColorSlider.value)
         blueColorLabel.text = String(format: "%.2f", blueColorSlider.value)
         
+        viewArea.layer.cornerRadius = 5
+        
         changeColorView()
     }
     
