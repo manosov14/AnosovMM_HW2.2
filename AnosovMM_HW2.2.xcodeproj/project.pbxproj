@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		874A5D3426979C9A0014FD41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874A5D3326979C9A0014FD41 /* AppDelegate.swift */; };
 		874A5D3626979C9A0014FD41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874A5D3526979C9A0014FD41 /* SceneDelegate.swift */; };
-		874A5D3826979C9A0014FD41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874A5D3726979C9A0014FD41 /* ViewController.swift */; };
+		874A5D3826979C9A0014FD41 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874A5D3726979C9A0014FD41 /* SettingsViewController.swift */; };
 		874A5D3B26979C9A0014FD41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 874A5D3926979C9A0014FD41 /* Main.storyboard */; };
 		874A5D3D26979C9C0014FD41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 874A5D3C26979C9C0014FD41 /* Assets.xcassets */; };
 		874A5D4026979C9C0014FD41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 874A5D3E26979C9C0014FD41 /* LaunchScreen.storyboard */; };
+		87BE0D3426ACCC3F00F0F2C2 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BE0D3326ACCC3F00F0F2C2 /* ColorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		874A5D3026979C9A0014FD41 /* AnosovMM_HW2.2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnosovMM_HW2.2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		874A5D3326979C9A0014FD41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		874A5D3526979C9A0014FD41 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		874A5D3726979C9A0014FD41 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		874A5D3726979C9A0014FD41 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		874A5D3A26979C9A0014FD41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		874A5D3C26979C9C0014FD41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		874A5D3F26979C9C0014FD41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		874A5D4126979C9C0014FD41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87BE0D3326ACCC3F00F0F2C2 /* ColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,56 @@
 		874A5D3226979C9A0014FD41 /* AnosovMM_HW2.2 */ = {
 			isa = PBXGroup;
 			children = (
-				874A5D3326979C9A0014FD41 /* AppDelegate.swift */,
-				874A5D3526979C9A0014FD41 /* SceneDelegate.swift */,
-				874A5D3726979C9A0014FD41 /* ViewController.swift */,
-				874A5D3926979C9A0014FD41 /* Main.storyboard */,
-				874A5D3C26979C9C0014FD41 /* Assets.xcassets */,
-				874A5D3E26979C9C0014FD41 /* LaunchScreen.storyboard */,
-				874A5D4126979C9C0014FD41 /* Info.plist */,
+				87BE0D2E26ACCB5800F0F2C2 /* View Controllers */,
+				87BE0D3026ACCB8F00F0F2C2 /* Models */,
+				87BE0D2F26ACCB7000F0F2C2 /* Storyboards */,
+				87BE0D3226ACCBCA00F0F2C2 /* Supporting files */,
+				87BE0D3126ACCBAF00F0F2C2 /* Resources */,
 			);
 			path = AnosovMM_HW2.2;
+			sourceTree = "<group>";
+		};
+		87BE0D2E26ACCB5800F0F2C2 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				87BE0D3326ACCC3F00F0F2C2 /* ColorViewController.swift */,
+				874A5D3726979C9A0014FD41 /* SettingsViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		87BE0D2F26ACCB7000F0F2C2 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				874A5D3926979C9A0014FD41 /* Main.storyboard */,
+				874A5D3E26979C9C0014FD41 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		87BE0D3026ACCB8F00F0F2C2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		87BE0D3126ACCBAF00F0F2C2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				874A5D3C26979C9C0014FD41 /* Assets.xcassets */,
+				874A5D4126979C9C0014FD41 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		87BE0D3226ACCBCA00F0F2C2 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				874A5D3326979C9A0014FD41 /* AppDelegate.swift */,
+				874A5D3526979C9A0014FD41 /* SceneDelegate.swift */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +180,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				874A5D3826979C9A0014FD41 /* ViewController.swift in Sources */,
+				874A5D3826979C9A0014FD41 /* SettingsViewController.swift in Sources */,
 				874A5D3426979C9A0014FD41 /* AppDelegate.swift in Sources */,
+				87BE0D3426ACCC3F00F0F2C2 /* ColorViewController.swift in Sources */,
 				874A5D3626979C9A0014FD41 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,7 +331,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = AnosovMM_HW2.2/Info.plist;
+				INFOPLIST_FILE = AnosovMM_HW2.2/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,7 +349,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = AnosovMM_HW2.2/Info.plist;
+				INFOPLIST_FILE = AnosovMM_HW2.2/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
