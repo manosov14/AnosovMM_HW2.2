@@ -9,10 +9,6 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
-    //MARK: - Pulic properties
-    var colorSettings: UIColor?
-    var delegate: ColorViewController?
-     
     // MARK: - IBOutlets
     @IBOutlet weak var colorViewOU: UIView!
     @IBOutlet weak var viewer: UIView!
@@ -25,11 +21,16 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var greenSliderOU: UISlider!
     @IBOutlet weak var blueSliderOU: UISlider!
     
+    //MARK: - Pulic properties
+    var colorSettings: UIColor?
+    var delegate: ColorViewController?
+    
     // MARK: Life sicle methods
     override func viewDidLoad() {
         super.viewDidLoad()
         colorViewOU.backgroundColor = colorSettings
         colorViewOU.layer.cornerRadius = colorViewOU.frame.width / 15
+        setSlidersColor()
         setLabelValue(for: redLabelOU, greenLabelOU, blueLabelOU)
     }
     
@@ -40,21 +41,11 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func saveButtonAction(_ sender: UIButton) {
-        colorSettings = colorViewOU.backgroundColor
-        delegate?.updateColor(color: colorViewOU.backgroundColor!)
+        delegate?.updateColor(color: colorViewOU.backgroundColor ?? UIColor(red: 1, green: 1, blue: 0, alpha: 1))
         dismiss(animated: true)
     }
     
     //MARK: - Private methods
-    
-    private func setColor(red: Float, green: Float, blue: Float) {
-        colorViewOU.backgroundColor = UIColor(
-            red: CGFloat(red),
-            green: CGFloat(green),
-            blue: CGFloat(blue),
-            alpha: 1)
-    }
-    
     private func setColor() {
         colorViewOU.backgroundColor = UIColor(red: CGFloat(redSliderOU.value),
                                               green: CGFloat(greenSliderOU.value),
@@ -77,5 +68,12 @@ class SettingsViewController: UIViewController {
     
     private func string(from slider: UISlider) -> String {
         String(format: "%.2f", slider.value)
+    }
+    
+    private func setSlidersColor() {
+        let ciColor = CIColor(color: colorSettings ?? .white)
+        redSliderOU.value = Float(ciColor.red)
+        greenSliderOU.value = Float(ciColor.green)
+        blueSliderOU.value = Float(ciColor.blue)
     }
 }
