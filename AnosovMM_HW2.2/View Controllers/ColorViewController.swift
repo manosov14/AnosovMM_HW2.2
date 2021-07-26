@@ -8,60 +8,39 @@
 import UIKit
 
 protocol settingsViewControllerDelegate {
-    
-    //Целевой вариант
-    //func setNewColor(color: UIColor)
-    
-    //Текущий рабочий вариант
-    func setNewColor(red: Float, green: Float, blue: Float)
+    func updateColor(color: UIColor)
 }
 
 class ColorViewController: UIViewController {
     
-    // Целевая переменная
-    var colorSettings = UIColor(red: CGFloat(1),
-                                green: CGFloat(1),
-                                blue: CGFloat(1),
-                                alpha: CGFloat(1))
+    //MARK: - public properties
+    var colorSettings = UIColor(red: 1, green: 1, blue: 0, alpha: 1)
     
-    // Временные переменные (текущее рабочее)
-    var red: Float = 1
-    var green: Float = 0.5
-    var blue: Float = 0.5
-    
+    //MARK: - IB Outlets
     @IBOutlet weak var backgroundViewOU: UIView!
+    
+    // MARK: - Override methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
         backgroundViewOU.backgroundColor = colorSettings
-        backgroundViewOU.backgroundColor = UIColor(
-            red: CGFloat(red),
-            green: CGFloat(green),
-            blue: CGFloat(blue),
-            alpha: CGFloat(1))
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let settingsVC = segue.destination as? SettingsViewController else { return }
-        
-        // Целевой параметр
-        settingsVC.colorSettings = colorSettings
-        
-        //Временное решение (текущее рабочее)
-        settingsVC.redColorExtValue = red
-        settingsVC.greenColorExtValue = green
-        settingsVC.blueColorExtValue = blue
-        
+        settingsVC.colorSettings = backgroundViewOU.backgroundColor
+        settingsVC.delegate = self
     }
     
-    @IBAction func changeSettingsAction(_ sender: Any) {
+    // MARK: - IB Actions
+    
+    @IBAction func colorSettingsAction(_ sender: Any) {
     }
 }
+    //MARK: - Extensions
 
 extension ColorViewController: settingsViewControllerDelegate {
-    func setNewColor(red: Float, green: Float, blue: Float) {
-        <#code#>
-    }
-    
-    
+    func updateColor(color: UIColor) {
+        backgroundViewOU.backgroundColor = color
+    }    
 }

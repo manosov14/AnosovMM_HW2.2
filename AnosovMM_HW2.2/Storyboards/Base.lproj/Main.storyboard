@@ -148,14 +148,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="H7E-Wk-BgY"/>
                     <connections>
-                        <outlet property="blueColorLabel" destination="xlG-R5-goh" id="TCh-QT-nYc"/>
-                        <outlet property="blueColorSlider" destination="ppp-Ow-LCH" id="uD1-hE-2yC"/>
-                        <outlet property="greenColorLabel" destination="CKa-LO-GuK" id="2ha-ft-ypG"/>
-                        <outlet property="greenColorSlider" destination="TAX-oF-ill" id="5IT-r4-VYv"/>
-                        <outlet property="redColorLabel" destination="mvM-nW-LqL" id="TYf-5I-K02"/>
-                        <outlet property="redColorSlider" destination="o68-kz-4Hz" id="HXf-z6-wSO"/>
-                        <outlet property="viewArea" destination="gkl-BW-euD" id="VkB-y7-VB3"/>
-                        <outlet property="viewer" destination="8bC-Xf-vdC" id="ek0-KG-LcY"/>
+                        <outlet property="blueLabelOU" destination="xlG-R5-goh" id="TCh-QT-nYc"/>
+                        <outlet property="blueSliderOU" destination="ppp-Ow-LCH" id="uD1-hE-2yC"/>
+                        <outlet property="colorViewOU" destination="gkl-BW-euD" id="VkB-y7-VB3"/>
+                        <outlet property="greenLabelOU" destination="CKa-LO-GuK" id="2ha-ft-ypG"/>
+                        <outlet property="greenSliderOU" destination="TAX-oF-ill" id="5IT-r4-VYv"/>
+                        <outlet property="redLabelOU" destination="mvM-nW-LqL" id="TYf-5I-K02"/>
+                        <outlet property="redSliderOU" destination="o68-kz-4Hz" id="HXf-z6-wSO"/>
+                        <outlet property="viewer" destination="gkl-BW-euD" id="5BF-oM-wu7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -182,7 +182,7 @@
                     <navigationItem key="navigationItem" id="JKL-cY-v3C">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.pencil" catalog="system" id="me2-uy-6AF">
                             <connections>
-                                <action selector="changeSettingsAction:" destination="Aod-zA-yVv" id="iEA-gr-wqg"/>
+                                <action selector="colorSettingsAction:" destination="Aod-zA-yVv" id="iEA-gr-wqg"/>
                                 <segue destination="BYZ-38-t0r" kind="showDetail" id="1lm-kC-hg7"/>
                             </connections>
                         </barButtonItem>
